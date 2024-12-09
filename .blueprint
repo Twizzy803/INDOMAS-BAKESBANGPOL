@@ -1,0 +1,35 @@
+created:
+    - database/factories/LoginFactory.php
+    - database/factories/OrmasFactory.php
+    - database/factories/KategoriOrmasFactory.php
+    - database/factories/DokumenFactory.php
+    - database/factories/StoriesFactory.php
+    - database/factories/GalleryFactory.php
+    - database/migrations/2024_12_05_081323_create_logins_table.php
+    - database/migrations/2024_12_05_081324_create_ormas_table.php
+    - database/migrations/2024_12_05_081325_create_kategori_ormas_table.php
+    - database/migrations/2024_12_05_081326_create_dokumens_table.php
+    - database/migrations/2024_12_05_081327_create_stories_table.php
+    - database/migrations/2024_12_05_081328_create_galleries_table.php
+    - app/Models/Login.php
+    - app/Models/Ormas.php
+    - app/Models/KategoriOrmas.php
+    - app/Models/Dokumen.php
+    - app/Models/Stories.php
+    - app/Models/Gallery.php
+models:
+    User: { name: string, email: string, email_verified_at: 'timestamp nullable', password: string, remember_token: 'string:100 nullable' }
+    login: { email: string, password: string, role: 'enum:admin,ormas', remember_token: 'nullable string', relationships: { hasMany: stories, hasOne: session } }
+    ormas: { pemohon: string, telp: string, email: string, password: string, nama_ormas: string, alamat: text, struktur_pengurus: text, jumlah_anggota: int, kategori_ormas_id: 'id foreign:kategori_ormas.id', status: 'enum:setuju, tolak', relationships: { hasOne: dokumen, belongsTo: kategori_ormas } }
+    kategori_ormas: { nama: string, relationships: { hasOne: ormas } }
+    dokumen: { ormas_id: 'id foreign:ormas.id', nama: string, path: text, relationships: { belongsTo: ormas } }
+    stories: { login_id: 'id foreign:login.id', cerita: text, relationships: { hasMany: gallery, belongsTo: login } }
+    gallery: { stories_id: 'id foreign:stories.id', path: text, relationships: { belongsTo: stories } }
+    sessions: { login_id: 'id foreign:login.id', ip_address: 'nulllable string', user_agent: text, payload: 'long text', last_activity: integer, relationships: { belongsTo: login }, indexes: [{ unique: 'last_activity, login_id' }] }
+    session: { login_id: 'id foreign:login.id', ip_address: 'nulllable string', user_agent: text, payload: 'long text', last_activity: integer, relationships: { belongsTo: login }, indexes: [{ unique: 'last_activity, login_id' }] }
+    Login: { email: string, password: string, role: 'enum:admin,ormas', remember_token: 'nullable string', relationships: { hasOne: session } }
+    Ormas: { pemohon: string, telp: string, email: string, password: string, nama_ormas: string, alamat: text, struktur_pengurus: text, kategori_ormas_id: 'id foreign:kategori_ormas.id', status: 'enum:setuju,tolak,pending', relationships: { hasOne: Dokumen, belongsTo: KategoriOrmas, hasMany: Stories } }
+    KategoriOrmas: { nama: string, relationships: { hasOne: Ormas } }
+    Dokumen: { ormas_id: 'id foreign:ormas.id', nama: string, path: text, relationships: { belongsTo: Ormas } }
+    Stories: { ormas_id: 'id foreign:ormas.id', cerita: text, relationships: { hasMany: gallery, belongsTo: Ormas } }
+    Gallery: { stories_id: 'id foreign:stories.id', path: text, relationships: { belongsTo: Stories } }

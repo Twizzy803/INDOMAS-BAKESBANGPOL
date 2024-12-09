@@ -1,0 +1,43 @@
+models:
+  Login:
+    email: string
+    password: string
+    role: enum:admin,ormas
+    remember_token: nullable string
+    relationships:
+      hasOne: session
+  Ormas:
+    pemohon: string
+    telp: string
+    email: string
+    password: string
+    nama_ormas: string
+    alamat: text
+    struktur_pengurus: text
+    kategori_ormas_id: id foreign:kategori_ormas.id
+    status: enum:setuju,tolak,pending
+    relationships:
+      hasOne: Dokumen
+      belongsTo: KategoriOrmas
+      hasMany: Stories
+  KategoriOrmas:
+    nama: string
+    relationships:
+      hasOne: Ormas
+  Dokumen:
+    ormas_id: id foreign:ormas.id
+    nama: string
+    path: text
+    relationships:
+      belongsTo: Ormas
+  Stories:
+    ormas_id: id foreign:ormas.id
+    cerita: text
+    relationships:
+      hasMany: gallery
+      belongsTo: Ormas
+  Gallery:
+    stories_id: id foreign:stories.id
+    path: text
+    relationships:
+      belongsTo: Stories

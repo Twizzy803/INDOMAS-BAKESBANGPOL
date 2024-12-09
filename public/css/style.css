@@ -1,0 +1,228 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+body {
+    background-color: white;
+    font-family: "Poppins", sans-serif !important;
+}
+header {
+    position: sticky;
+    z-index: 99;
+    top: 0;
+    background-color: white !important;
+}
+.container {
+    display: flex;
+    align-items: center;
+}
+.lg-batu {
+    width: 112px;
+}
+.lg-kesbang {
+    margin-left: 50px;
+    width: 145px;
+}
+.logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+.logo_text {
+    flex-direction: column;
+    color: #00a650;
+    font-weight: bold;
+}
+.logo img {
+    width: 4%;
+    margin-right: 1%;
+}
+.akun {
+    display: flex;
+    margin-right: 5%;
+}
+.akun button {
+    font-family: "Poppins", sans-serif;
+    font-weight: bold;
+    background-color: #00a650;
+    color: white;
+    width: 7em;
+    height: 3em;
+    border: 2px solid #00a650;
+    border-radius: 10px;
+}
+.akun button:hover {
+    transition-duration: 0.4s;
+    background-color: white;
+    border: 2px solid #00a650;
+    color: #00a650;
+}
+.inpoindomas {
+    background-image: url("/img/bg1.png");
+    background-size: cover;
+    margin-top: -5%;
+}
+#bg-Form {
+    background-image: url("/img/bg1.png");
+    background-size: cover;
+    margin-top: -5%;
+}
+.inpoindomas h1,
+.inpoindomas p {
+    color: white !important;
+    margin-top: 7%;
+}
+.inpoindomas button {
+    background-color: #00a650;
+    color: white;
+    font-weight: bold;
+    border: 2px solid #00a650;
+}
+.inpoindomas button:hover {
+    background-color: white;
+    color: #00a650;
+    border: 2px solid #00a650;
+}
+.inpoindomas button:active {
+    background-color: #00a650 !important;
+    color: white !important;
+    border: 2px solid #00a650 !important;
+}
+.media form {
+    justify-content: center;
+}
+.btn_upload {
+    background-color: #00a650;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-left: 5px;
+}
+.btn_today {
+    background-color: #00a650 !important;
+    color: white;
+    border: #00a650 !important;
+    font-weight: bold !important;
+}
+.login {
+    margin-top: 7%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.card-login {
+    width: 40%;
+}
+.form_login {
+    margin-top: 2%;
+    padding: 6%;
+}
+.form_login input {
+    width: 100%;
+    border-radius: 5px;
+    border: 1.5px solid #4e4e4e;
+}
+.form_login button {
+    width: 100%;
+}
+.card-story {
+    justify-self: center;
+}
+.masukbutton {
+    margin-top: 2%;
+    background-color: #00a650;
+    font-weight: bold;
+    color: white;
+    border: 2px solid #00a650;
+    border-radius: 5px;
+}
+.footer {
+    background-color: #00a650;
+    color: white;
+    position: sticky;
+    bottom: 0;
+    z-index: 99;
+}
+.container-footer {
+    text-align: -webkit-center;
+}
+
+.modal {
+    /* Modal disembunyikan secara default */
+    /* display: block !important; */
+    position: fixed;
+    z-index: 1; /* Pastikan modal berada di atas konten lainnya */
+    left: 0;
+    top: 0;
+    width: 100%; /* Lebar modal */
+    height: 100%; /* Tinggi modal */
+    overflow: auto; /* Jika konten lebih besar, tambahkan scroll */
+    background-color: rgb(0, 0, 0); /* Latar belakang semi-transparan */
+    background-color: rgba(0, 0, 0, 0.4); /* Efek transparansi */
+    text-align: center;
+}
+.close {
+    display: none;
+}
+.form-pengajuan {
+    padding: 1%;
+}
+.form-pengajuan input {
+    width: 100%;
+    border: 1.5px solid #4e4e4e;
+    border-radius: 5px;
+}
+.form-pengajuan textarea {
+    width: 100%;
+    height: 6em;
+    border: 1.5px solid #4e4e4e;
+    border-radius: 5px;
+}
+.form-pengajuan button {
+    background-color: #00a650;
+    color: white;
+    border: 1.5px solid #00a650;
+    border-radius: 5px;
+    width: 100%;
+    font-weight: bold;
+    padding: 5px;
+}
+.modal-story textarea {
+    width: 85%;
+    height: 8rem;
+}
+.btn-post {
+    background-color: blueviolet;
+    color: white;
+    font-weight: bold;
+    border: 1.5px solid blueviolet;
+    border-radius: 5px;
+    width: 100%;
+}
+@media only screen and (max-width: 445px) {
+    header {
+        font-size: 2rem;
+    }
+    .logo img {
+        width: 90px;
+    }
+    .container {
+        justify-content: space-between;
+    }
+    .inpoindomas h1 {
+        font-size: 6rem;
+    }
+    .inpoindomas p {
+        font-size: 2rem;
+    }
+    .card-story {
+        width: 75% !important;
+    }
+    .container-footer {
+        justify-items: center;
+    }
+    .card-login {
+        width: 80%;
+    }
+    .lg-batu {
+        width: 100px;
+    }
+}

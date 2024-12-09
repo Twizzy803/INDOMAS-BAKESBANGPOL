@@ -1,0 +1,144 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+body {
+    font-family: "Poppins", sans-serif !important;
+}
+header {
+    background-color: #00a650;
+}
+header img {
+    width: 45px;
+}
+header button {
+    background-color: #00a650;
+    color: white;
+    font-weight: bold;
+    border: 2px solid white;
+    border-radius: 5px;
+}
+header button:hover {
+    background-color: white;
+    color: #00a650;
+}
+.container-header {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    justify-content: space-between;
+}
+.container h1 {
+    color: #00000080;
+}
+.logo {
+    display: flex;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    width: 25%;
+}
+.sidebar {
+    width: 23%;
+    min-height: 100%;
+    position: fixed;
+    z-index: 99;
+    background-color: #00a650 !important;
+}
+.dashboard svg {
+    background-image: url(http://localhost:8000/img/kotabatu.png);
+    min-width: 15%;
+    height: 60px;
+    background-size: cover;
+}
+.dashboard h2 {
+    margin-bottom: 6%;
+    font-size: 0.6em;
+    color: #fff;
+    font-weight: bold;
+}
+.home {
+    margin-left: 23%;
+}
+.home1 {
+    display: flex;
+    justify-content: space-around;
+}
+.daftar {
+    margin-left: 23%;
+}
+.akun {
+    margin-left: 13%;
+}
+.btn-detail {
+    background-color: none;
+    color: blueviolet;
+    border: 1.5px solid blueviolet;
+    border-radius: 5px;
+    font-weight: bold;
+}
+.card-detail {
+    width: 95%;
+    justify-self: center;
+    margin-top: 5%;
+}
+.btn-setuju {
+    background-color: blueviolet;
+    color: white;
+    font-weight: bold;
+    border: 1.5px solid blueviolet;
+    border-radius: 5px;
+}
+.btn-akses {
+    background-color: red;
+    color: white;
+    font-weight: bold;
+    border: 1.5px solid red;
+    border-radius: 5px;
+}
+.btn-hapus {
+    background-color: none;
+    color: red;
+    font-weight: bold;
+    border: 1.5px solid red;
+    border-radius: 5px;
+}
+.btn-ubah {
+    background-color: #00a650;
+    color: white;
+    font-weight: bold;
+    border: 1.5px solid #00a650;
+    border-radius: 5px;
+}
+.btn-simpan {
+    background-color: blueviolet;
+    color: white;
+    font-weight: bold;
+    border: 1.5px solid blueviolet;
+    border-radius: 5px;
+}
+.card-body input {
+    border: 1.5px solid #00000080;
+    border-radius: 5px;
+}
+.btn-tambah {
+    background-color: #00a650;
+    color: white;
+    font-weight: bold;
+    border: 1.5px solid #00a650;
+    border-radius: 5px;
+}
+.btn-search {
+    background-color: #00a650;
+    color: white;
+    font-weight: bold;
+    border: 1.5px solid #00a650;
+    border-radius: 5px;
+}
+.judul {
+    margin-top: 2%;
+    display: flex;
+    justify-content: space-between;
+}
+h1 {
+    color: #00000080;
+    margin-left: 1%;
+}
