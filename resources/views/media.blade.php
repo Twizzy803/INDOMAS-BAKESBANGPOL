@@ -47,7 +47,7 @@
                 <p style="font-size: 12px; color: gray;"> {{ \Carbon\Carbon::parse($story['created_at'])->setTimezone('Asia/Jakarta')->translatedFormat('d F Y H:i') }}</p>
                 <p class="card-text">{{ $story['cerita'] }}</p>
             </div>
-              <img src="{{ asset('story/' . $story->ormas['nama_ormas'] . '/' . $story->galleries['path']) }}">
+            <img src="{{ asset('story/' . ($story->ormas->nama_ormas ?? 'default') . '/' . ($story->galleries->path ?? 'default-image.jpg')) }}">
         </div>
         @endforeach
         {{-- @if (Auth::check())

@@ -60,6 +60,7 @@
                             <th scope="col">Nama Pemohon</th>
                             <th scope="col">Nama Ormas</th>
                             <th scope="col">Bidang Kajian</th>
+                            <th scope="col">Status</th>
                             <th scope="col">Dibuat</th>
                             <th scope="col">Aksi</th>
                         </tr>
@@ -72,6 +73,7 @@
                             <td>{{ $ormas['pemohon'] }}</td>
                             <td>{{ $ormas['nama_ormas'] }}</td>
                             <td>{{ $ormas->kategoriOrmas['nama'] }}</td>
+                            <td>{{ $ormas['status'] }}</td>
                             <td>{{ $ormas['created_at'] }}</td>
                             <td>
                                 <button class="btn-detail" onclick="location.href='{{ route('admin.ormas.detail', $ormas['id'] )}}'"><i class="bi bi-info-circle-fill"></i>Detail</button>

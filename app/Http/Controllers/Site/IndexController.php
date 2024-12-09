@@ -10,7 +10,7 @@ use App\Models\Stories;
 use Illuminate\Http\Request;
 use File;
 
-class IndexController extends Controller
+class  IndexController extends Controller
 {
     public function Index()
     {
