@@ -20,8 +20,8 @@
                 <!-- resources/views/cerita/create.blade.php -->
                 <form class="modal-story" action="{{ route('site.createStory', Auth::user()->id) }}" method="POST" enctype="multipart/form-data">
                     @csrf
-                    <textarea id="myeditorinstance" name="content_cerita"></textarea><br>
-                    <input type="file" name="image"><br><br>
+                    <textarea id="myeditorinstance" name="content_cerita" required></textarea><br>
+                    <input type="file" name="image" required><br><br>
                     <button class="btn-post" type="submit">Post</button>
                 </form>
                 @endif              

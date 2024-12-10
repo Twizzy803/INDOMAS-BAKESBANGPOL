@@ -76,6 +76,11 @@
                             <td>{{ $ormas['status'] }}</td>
                             <td>{{ $ormas['created_at'] }}</td>
                             <td>
+                                <form action="{{ route('admin.ormas.delete', $ormas['id']) }}" method="POST" style="display: inline;">
+                                    @csrf
+                                    @method("DELETE")
+                                    <button class="btn-hapus"><i class="bi bi-trash-fill"></i>Hapus</button>
+                                </form>
                                 <button class="btn-detail" onclick="location.href='{{ route('admin.ormas.detail', $ormas['id'] )}}'"><i class="bi bi-info-circle-fill"></i>Detail</button>
                             </td>
                         </tr>

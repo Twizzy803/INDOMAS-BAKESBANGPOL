@@ -66,4 +66,25 @@ class OrmasController extends Controller
             return back()->with('error', 'Gagal menghapus login dari ormas ' . $ormas['nama_ormas']);
         }
     }
+    public function delete($id)
+    {
+        $ormas = Ormas::find($id);
+
+        if (!$ormas) {
+            return back()->with('error', 'Ormas tidak ditemukan');
+        }
+
+        $ormas->dokumen()->delete();
+
+        $login = Login::where('email', $ormas->email)->first();
+        if ($login) {
+            $login->delete();
+        }
+
+        if ($ormas->delete()) {
+            return back()->with('success', 'Ormas dan data terkait berhasil dihapus');
+        } else {
+            return back()->with('error', 'Gagal menghapus Ormas');
+        }
+    }
 }

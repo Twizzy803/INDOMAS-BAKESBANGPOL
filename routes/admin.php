@@ -11,13 +11,13 @@ Route::group([
     'as' => 'admin.',
     'controller' => AdminController::class,
     'middleware' => ['auth', 'role:admin']
-], function(){
+], function () {
     Route::get('/', 'dashboard')->name('dashboard');
     Route::group([
         'prefix' => 'akun',
         'as' => 'akun.',
         'controller' => AkunController::class
-    ], function(){
+    ], function () {
         Route::get('/', 'index')->name('index');
         Route::get('/tambah', 'tambah')->name('tambah');
         Route::post('/tambah', 'simpan')->name('simpan');
@@ -30,7 +30,7 @@ Route::group([
         'prefix' => 'kategori',
         'as' => 'kategori.',
         'controller' => KategoriController::class,
-    ], function(){
+    ], function () {
         Route::get('/', 'index')->name('index');
         Route::get('/tambah', 'tambah')->name('tambah');
         Route::post('/tambah', 'simpan')->name('simpan');
@@ -43,11 +43,12 @@ Route::group([
         'prefix' => 'ormas',
         'as' => 'ormas.',
         'controller' => OrmasController::class,
-    ], function(){
+    ], function () {
         Route::get('/', 'index')->name('index');
         Route::get('/{id}', 'detail')->name('detail');
         Route::post('/{id}/setuju', 'setuju')->name('setuju');
         Route::post('/{id}/tolak', 'tolak')->name('tolak');
         Route::post('/{id}/hapusAkses', 'hapusAkses')->name('hapusAkses');
+        Route::delete('/{id}', 'delete')->name('delete');
     });
 });
