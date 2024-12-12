@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\OrmasController;
 use App\Http\Controllers\Site\IndexController;
 use App\Http\Controllers\Site\PengajuanController;
 use Illuminate\Support\Facades\Route;

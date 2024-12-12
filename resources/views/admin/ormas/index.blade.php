@@ -74,7 +74,7 @@
                             <td>{{ $ormas['nama_ormas'] }}</td>
                             <td>{{ $ormas->kategoriOrmas['nama'] }}</td>
                             <td>{{ $ormas['status'] }}</td>
-                            <td>{{ $ormas['created_at'] }}</td>
+                            <td>{{ \Carbon\Carbon::parse($ormas['created_at'])->setTimezone('Asia/Jakarta')->translatedFormat('d F Y H:i') }}</td>
                             <td>
                                 <form action="{{ route('admin.ormas.delete', $ormas['id']) }}" method="POST" style="display: inline;">
                                     @csrf

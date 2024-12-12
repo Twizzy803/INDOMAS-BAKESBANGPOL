@@ -11,8 +11,9 @@
           @if(!Auth::check())
           <button type="button" class="btn btn-lg px-4 me-sm-3" onclick="location.href='{{ route('site.pengajuan.request')}}'">Form Pengajuan Indomas</button>  
           @endif
-          <button type="button" class="btn btn-lg px-4 me-sm-3" onclick="location.href='//drive.google.com/file/d/17WajAkNz1IHmzVxPsbR3fPPyIAg_GVAG/view?usp=sharing'">Panduan Pengajuan Indomas</button>
+          <button type="button" class="btn btn-lg px-4 me-sm-3" onclick="location.href='https://drive.google.com/file/d/1lk_P0QL1kahCrq733pX6Ed0iACAOd4pG/view?usp=sharing'">Panduan Pengajuan Indomas</button>
         </div>
+        <button type="button" class="btn btn-lg px-4 me-sm-3" onclick="location.href='{{ route('site.list.list')}}'">LIST ORMAS</button>
       </div>
     </div>
   </div>
