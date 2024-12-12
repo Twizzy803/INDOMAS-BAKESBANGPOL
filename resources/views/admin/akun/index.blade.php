@@ -70,7 +70,7 @@
                             <td>{{ $no++ }}</td>
                             <td>{{ $model['email'] }}</td>
                             <td>{{ $model['role'] }}</td>
-                            <td>{{ $model['created_at'] }}</td>
+                            <td>{{ \Carbon\Carbon::parse($model['created_at'])->setTimezone('Asia/Jakarta')->translatedFormat('d F Y H:i') }}</td>
                             <td>
                                 {{-- <form action="{{ route('admin.akun.delete', $model['id']) }}" method="POST" style="display: inline;">
                                     @csrf

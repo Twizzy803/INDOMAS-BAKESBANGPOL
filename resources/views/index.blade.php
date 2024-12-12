@@ -13,7 +13,7 @@
           @endif
           <button type="button" class="btn btn-lg px-4 me-sm-3" onclick="location.href='https://drive.google.com/file/d/1lk_P0QL1kahCrq733pX6Ed0iACAOd4pG/view?usp=sharing'">Panduan Pengajuan Indomas</button>
         </div>
-        <button type="button" class="btn btn-lg px-4 me-sm-3" onclick="location.href='{{ route('site.list.list')}}'">LIST ORMAS</button>
+        <button type="button" class="btn btn-lg px-4 me-sm-3" onclick="location.href='{{ route('site.list.index')}}'">LIST ORMAS</button>
       </div>
     </div>
   </div>

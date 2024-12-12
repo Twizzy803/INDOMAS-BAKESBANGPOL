@@ -5,9 +5,13 @@ body {
 }
 header {
     background-color: #00a650;
+    position: sticky;
+    top: 0;
+    z-index: 99;
 }
 header img {
     width: 45px;
+    margin-right: 6px;
 }
 header button {
     background-color: #00a650;
@@ -38,10 +42,18 @@ header button:hover {
 }
 .sidebar {
     width: 23%;
-    min-height: 100%;
-    position: fixed;
-    z-index: 99;
-    background-color: #00a650 !important;
+    position: fixed; /* Menggunakan fixed agar sidebar tetap di tempat */
+    z-index: 98;
+    top: 0; /* Menjaga jarak dari bagian atas */
+    left: 0; /* Agar menempel di sisi kiri */
+    height: 100vh; /* Menjamin tinggi sidebar sama dengan tinggi viewport */
+    overflow-y: auto; /* Jika kontennya panjang, sidebar dapat diskroll */
+    background-color: #00a650; /* Pastikan latar belakang sesuai */
+    color: white;
+    padding: 10px; /* Menambah padding untuk estetika */
+}
+.dashboard ul {
+    margin-top: 25%;
 }
 .dashboard svg {
     background-image: url(http://localhost:8000/img/kotabatu.png);
@@ -56,14 +68,16 @@ header button:hover {
     font-weight: bold;
 }
 .home {
-    margin-left: 23%;
+    margin-left: 24%;
+    padding-top: 10px;
 }
 .home1 {
     display: flex;
     justify-content: space-around;
 }
 .daftar {
-    margin-left: 23%;
+    margin-left: 24%;
+    padding-top: 15px;
 }
 .akun {
     margin-left: 13%;
@@ -134,7 +148,6 @@ header button:hover {
     border-radius: 5px;
 }
 .judul {
-    margin-top: 2%;
     display: flex;
     justify-content: space-between;
 }

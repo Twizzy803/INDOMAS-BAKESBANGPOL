@@ -30,6 +30,11 @@ class OrmasController extends Controller
 
         return view('admin.ormas.index', compact('ormaes'));
     }
+    public function viewListOrmas()
+    {
+        $ormaes = Ormas::all();
+        return view('listOrmas', compact(['ormaes']));
+    }
 
     public function detail($id)
     {

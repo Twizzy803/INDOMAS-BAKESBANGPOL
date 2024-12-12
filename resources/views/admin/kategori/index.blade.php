@@ -10,7 +10,7 @@
     <title>Admin Indomas</title>
 </head>
 <body>
-@include('admin.header')
+    @include('admin.header')
     <section class="sidebar">
         <div class="d-flex flex-column flex-shrink-0 p-3 dashboard">
             <ul class="nav nav-pills flex-column mb-auto">
@@ -65,7 +65,7 @@
                             <tr>
                                 <td>{{ $no++ }}</td>
                                 <td>{{ $kategori['nama'] }}</td>
-                                <td>{{ $kategori['created_at'] }}</td>
+                                <td>{{ \Carbon\Carbon::parse($kategori['created_at'])->setTimezone('Asia/Jakarta')->translatedFormat('d F Y H:i') }}</td>
                                 <td>
                                     <form action="{{ route('admin.kategori.delete', $kategori['id']) }}" method="POST" style="display: inline;">
                                         @csrf
@@ -83,8 +83,10 @@
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="{{asset('..\js\main.js')}}"></script>
+    
 </body>
 </html>
+
 {{-- <ul>
     <li><a href="{{ route('admin.kategori.tambah') }}">Tambah Kategori</a></li>
 </ul>

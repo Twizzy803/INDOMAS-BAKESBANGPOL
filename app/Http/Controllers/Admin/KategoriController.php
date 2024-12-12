@@ -52,7 +52,7 @@ class KategoriController extends Controller
         $model->nama = $validated['nama'];
         $model->update();
 
-        return redirect()->route('admin.kategori.inedx', $model['id']);
+        return redirect()->route('admin.kategori.index', $model['id']);
     }
 
     public function delete($id)
