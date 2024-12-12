@@ -72,11 +72,11 @@
                             <td>{{ $model['role'] }}</td>
                             <td>{{ $model['created_at'] }}</td>
                             <td>
-                                <form action="{{ route('admin.akun.delete', $model['id']) }}" method="POST" style="display: inline;">
+                                {{-- <form action="{{ route('admin.akun.delete', $model['id']) }}" method="POST" style="display: inline;">
                                     @csrf
                                     @method("DELETE")
                                     <button class="btn-hapus" type="submit"><i class="bi bi-trash-fill"></i>Hapus</button>
-                                </form>
+                                </form> --}}
                                 <button class="btn-detail" onclick="location.href='{{ route('admin.akun.detail', $model['id']) }}'"><i class="bi bi-info-circle-fill"></i>Detail</button>
                             </td>
                         </tr>
