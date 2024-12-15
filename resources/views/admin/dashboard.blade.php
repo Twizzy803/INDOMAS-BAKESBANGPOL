@@ -59,7 +59,7 @@
           <div class="card" style="width: 15rem;">
             <a href="{{ route('admin.kategori.index')}}" style="text-decoration: none; color: #000;">
               <div class="card-body">
-                <h5 class="card-title"><i class="bi bi-tags"></i>Kategori</h5>
+                <h5 class="card-title"><i class="bi bi-tags"></i>Bidang Kajian</h5>
                 </div>
               </div>
             </a>

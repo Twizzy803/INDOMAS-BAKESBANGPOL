@@ -30,10 +30,7 @@
       </div>    
   </section>
   <br>
-                <!-- Tampilkan pesan sukses -->
-            {{-- @if (Auth::check('success'))
-            <button class="notif-success"> Berhasil Upload </button>
-            @endif --}}
+               
 
         <!-- Tampilkan daftar cerita -->
         @foreach($stories as $story)
@@ -50,10 +47,16 @@
             <img src="{{ asset('story/' . ($story->ormas->nama_ormas ?? 'default') . '/' . ($story->galleries->path ?? 'default-image.jpg')) }}">
         </div>
         @endforeach
-        {{-- @if (Auth::check())
-            <p>Belum ada cerita yang tersedia.</p>
-        @endif --}}
     </div>
 </body>
 
 <script src="{{asset('..\js\main.js')}}"></script>
+
+ <!-- Tampilkan pesan sukses -->
+            {{-- @if (Auth::check('success'))
+            <button class="notif-success"> Berhasil Upload </button>
+            @endif --}}
+
+   {{-- @if (Auth::check())
+            <p>Belum ada cerita yang tersedia.</p>
+        @endif --}}
